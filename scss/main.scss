@@ -1,0 +1,315 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "League Spartan", sans-serif;
+  background-color: #3a4663;
+  .continer {
+    max-width: 588px;
+    padding: 0 24px;
+    margin: 0 auto;
+    margin-top: 10vh;
+    .navbar {
+      margin-bottom: 32px;
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      .logo {
+        font-weight: 700;
+        font-size: 32px;
+        letter-spacing: -0.02em;
+        color: #fff;
+      }
+      .theme {
+        display: flex;
+        align-items: center;
+        gap: 26px;
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: 12px;
+        letter-spacing: 0.08em;
+        color: #fff;
+        .controler {
+          width: 71px;
+          height: 26px;
+          padding: 5px;
+          border-radius: 13px;
+          background-color: #242d44;
+          display: flex;
+          justify-content: space-between;
+          .circle {
+            position: relative;
+            cursor: pointer;
+            display: block;
+            width: 16px;
+            height: 16px;
+            border-radius: 100%;
+            background-color: transparent;
+            transition: 0.3s;
+            &:hover {
+              background-color: #f96b5b;
+            }
+            &::after {
+              content: "1";
+              position: absolute;
+              top: -10px;
+              left: 50%;
+              transform: translate(-50%, -100%);
+            }
+            &:nth-child(1) {
+              &::after {
+                content: "1";
+              }
+            }
+            &:nth-child(2) {
+              &::after {
+                content: "2";
+              }
+            }
+            &:nth-child(3) {
+              &::after {
+                content: "3";
+              }
+            }
+            &.isActive {
+              background-color: #d03f2f;
+            }
+          }
+        }
+      }
+    }
+    .output {
+      padding: 40px 32px 36px;
+      border-radius: 10px;
+      margin-bottom: 24px;
+      background-color: #181f33;
+      font-weight: 700;
+      font-size: 56px;
+      letter-spacing: -0.02em;
+      text-align: right;
+      color: #fff;
+    }
+    .buttons {
+      padding: 32px;
+      border-radius: 10px;
+      background-color: #242d44;
+      display: grid;
+      grid-auto-columns: 1fr;
+      grid-auto-rows: 64px;
+      gap: 24px 25px;
+      grid-template-areas:
+        "seven eight nine del"
+        "four five six plus"
+        "one two three minus"
+        "point zero  division multi"
+        "reset reset equal equal";
+      .btn {
+        cursor: pointer;
+        border: none;
+        border-radius: 10px;
+        margin-bottom: 4px;
+        background: #eae3dc;
+        box-shadow: 0 4px 0 0 #b3a497;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 700;
+        font-size: 40px;
+        letter-spacing: -0.02em;
+        color: #434a59;
+        transition: 0.3s;
+        &:hover {
+          background: #fffffe;
+        }
+        &:active {
+          transform: translateY(4px);
+          box-shadow: 0 0 0 0 #b3a497;
+        }
+        &.del,
+        &.reset,
+        &.equal {
+          background: #647198;
+          box-shadow: 0 4px 0 0 #414e73;
+          font-size: 28px;
+          color: #fff;
+          &:hover {
+            background: #a2b2e1;
+          }
+          &:active {
+            box-shadow: 0 0 0 0 #414e73;
+          }
+        }
+        &.equal {
+          background: #d03f2f;
+          box-shadow: 0 4px 0 0 #93261a;
+          &:hover {
+            background: #f96b5b;
+          }
+          &:active {
+            box-shadow: 0 0 0 0 #93261a;
+          }
+        }
+      }
+    }
+  }
+  &.theme2 {
+    background-color: #e6e6e6;
+    .continer {
+      .navbar {
+        .logo {
+          color: #36362c;
+        }
+        .theme {
+          color: #36362c;
+          .controler {
+            background-color: #d2cdcd;
+            .circle {
+              &:hover {
+                background-color: #ff8a38;
+              }
+              &.isActive {
+                background-color: #c85402;
+              }
+            }
+          }
+        }
+      }
+      .output {
+        background-color: #eeeeee;
+        color: #36362c;
+      }
+      .buttons {
+        background-color: #d2cdcd;
+        .btn {
+          background: #e5e4e1;
+          box-shadow: 0 4px 0 0 #a79e91;
+          color: #36362c;
+          &:hover {
+            background: #ffffff;
+          }
+          &:active {
+            box-shadow: 0 0 0 0 #a79e91;
+          }
+          &.del,
+          &.reset,
+          &.equal {
+            background: #378187;
+            box-shadow: 0 4px 0 0 #1b6066;
+            color: #fff;
+            &:hover {
+              background: #62b5bc;
+            }
+            &:active {
+              box-shadow: 0 0 0 0 #1b6066;
+            }
+          }
+          &.equal {
+            background: #c85402;
+            box-shadow: 0 4px 0 0 #873901;
+            &:hover {
+              background: #f96b5b;
+            }
+            &:active {
+              box-shadow: 0 0 0 0 #873901;
+            }
+          }
+        }
+      }
+    }
+  }
+  &.theme3 {
+    background-color: #17062a;
+    .continer {
+      .navbar {
+        .logo {
+          color: #ffe53d;
+        }
+        .theme {
+          color: #ffe53d;
+          .controler {
+            background-color: #1e0936;
+            .circle {
+              &:hover {
+                background-color: #00ded0;
+              }
+              &.isActive {
+                background-color: #93fff8;
+              }
+            }
+          }
+        }
+      }
+      .output {
+        background-color: #1e0936;
+        color: #ffe53d;
+      }
+      .buttons {
+        background-color: #1e0936;
+        .btn {
+          background: #331c4d;
+          box-shadow: 0 4px 0 0 #881c9e;
+          color: #ffe53d;
+          &:hover {
+            background: #6c34ac;
+          }
+          &:active {
+            box-shadow: 0 0 0 0 #881c9e;
+          }
+          &.del,
+          &.reset,
+          &.equal {
+            background: #56077c;
+            box-shadow: 0 4px 0 0 #be15f4;
+            color: #fff;
+            &:hover {
+              background: #8631af;
+            }
+            &:active {
+              box-shadow: 0 0 0 0 #be15f4;
+            }
+          }
+          &.equal {
+            background: #00ded0;
+            box-shadow: 0 4px 0 0 #6cf9f1;
+            color: #1a2327;
+            &:hover {
+              background: #93fff8;
+            }
+            &:active {
+              box-shadow: 0 0 0 0 #6cf9f1;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 425px) {
+  body {
+    .continer {
+      margin-top: 40px;
+      .output {
+        padding: 29px 24px 22px;
+        font-size: 40px;
+      }
+      .buttons {
+        padding: 24px;
+        grid-auto-rows: 64px;
+        gap: 13px;
+        .btn {
+          border-radius: 5px;
+          font-size: 32px;
+          &.del,
+          &.reset,
+          &.equal {
+            font-size: 20px;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,328 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: "League Spartan", sans-serif;
+  background-color: #3a4663;
+}
+body .continer {
+  max-width: 588px;
+  padding: 0 24px;
+  margin: 0 auto;
+  margin-top: 10vh;
+}
+body .continer .navbar {
+  margin-bottom: 32px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: end;
+}
+body .continer .navbar .logo {
+  font-weight: 700;
+  font-size: 32px;
+  letter-spacing: -0.02em;
+  color: #fff;
+}
+body .continer .navbar .theme {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 26px;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  color: #fff;
+}
+body .continer .navbar .theme .controler {
+  width: 71px;
+  height: 26px;
+  padding: 5px;
+  border-radius: 13px;
+  background-color: #242d44;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+body .continer .navbar .theme .controler .circle {
+  position: relative;
+  cursor: pointer;
+  display: block;
+  width: 16px;
+  height: 16px;
+  border-radius: 100%;
+  background-color: transparent;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+body .continer .navbar .theme .controler .circle:hover {
+  background-color: #f96b5b;
+}
+body .continer .navbar .theme .controler .circle::after {
+  content: "1";
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  -webkit-transform: translate(-50%, -100%);
+      -ms-transform: translate(-50%, -100%);
+          transform: translate(-50%, -100%);
+}
+body .continer .navbar .theme .controler .circle:nth-child(1)::after {
+  content: "1";
+}
+body .continer .navbar .theme .controler .circle:nth-child(2)::after {
+  content: "2";
+}
+body .continer .navbar .theme .controler .circle:nth-child(3)::after {
+  content: "3";
+}
+body .continer .navbar .theme .controler .circle.isActive {
+  background-color: #d03f2f;
+}
+body .continer .output {
+  padding: 40px 32px 36px;
+  border-radius: 10px;
+  margin-bottom: 24px;
+  background-color: #181f33;
+  font-weight: 700;
+  font-size: 56px;
+  letter-spacing: -0.02em;
+  text-align: right;
+  color: #fff;
+}
+body .continer .buttons {
+  padding: 32px;
+  border-radius: 10px;
+  background-color: #242d44;
+  display: grid;
+  grid-auto-columns: 1fr;
+  grid-auto-rows: 64px;
+  gap: 24px 25px;
+  grid-template-areas: "seven eight nine del" "four five six plus" "one two three minus" "point zero  division multi" "reset reset equal equal";
+}
+body .continer .buttons .btn {
+  cursor: pointer;
+  border: none;
+  border-radius: 10px;
+  margin-bottom: 4px;
+  background: #eae3dc;
+  -webkit-box-shadow: 0 4px 0 0 #b3a497;
+          box-shadow: 0 4px 0 0 #b3a497;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-weight: 700;
+  font-size: 40px;
+  letter-spacing: -0.02em;
+  color: #434a59;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+body .continer .buttons .btn:hover {
+  background: #fffffe;
+}
+body .continer .buttons .btn:active {
+  -webkit-transform: translateY(4px);
+      -ms-transform: translateY(4px);
+          transform: translateY(4px);
+  -webkit-box-shadow: 0 0 0 0 #b3a497;
+          box-shadow: 0 0 0 0 #b3a497;
+}
+body .continer .buttons .btn.del, body .continer .buttons .btn.reset, body .continer .buttons .btn.equal {
+  background: #647198;
+  -webkit-box-shadow: 0 4px 0 0 #414e73;
+          box-shadow: 0 4px 0 0 #414e73;
+  font-size: 28px;
+  color: #fff;
+}
+body .continer .buttons .btn.del:hover, body .continer .buttons .btn.reset:hover, body .continer .buttons .btn.equal:hover {
+  background: #a2b2e1;
+}
+body .continer .buttons .btn.del:active, body .continer .buttons .btn.reset:active, body .continer .buttons .btn.equal:active {
+  -webkit-box-shadow: 0 0 0 0 #414e73;
+          box-shadow: 0 0 0 0 #414e73;
+}
+body .continer .buttons .btn.equal {
+  background: #d03f2f;
+  -webkit-box-shadow: 0 4px 0 0 #93261a;
+          box-shadow: 0 4px 0 0 #93261a;
+}
+body .continer .buttons .btn.equal:hover {
+  background: #f96b5b;
+}
+body .continer .buttons .btn.equal:active {
+  -webkit-box-shadow: 0 0 0 0 #93261a;
+          box-shadow: 0 0 0 0 #93261a;
+}
+body.theme2 {
+  background-color: #e6e6e6;
+}
+body.theme2 .continer .navbar .logo {
+  color: #36362c;
+}
+body.theme2 .continer .navbar .theme {
+  color: #36362c;
+}
+body.theme2 .continer .navbar .theme .controler {
+  background-color: #d2cdcd;
+}
+body.theme2 .continer .navbar .theme .controler .circle:hover {
+  background-color: #ff8a38;
+}
+body.theme2 .continer .navbar .theme .controler .circle.isActive {
+  background-color: #c85402;
+}
+body.theme2 .continer .output {
+  background-color: #eeeeee;
+  color: #36362c;
+}
+body.theme2 .continer .buttons {
+  background-color: #d2cdcd;
+}
+body.theme2 .continer .buttons .btn {
+  background: #e5e4e1;
+  -webkit-box-shadow: 0 4px 0 0 #a79e91;
+          box-shadow: 0 4px 0 0 #a79e91;
+  color: #36362c;
+}
+body.theme2 .continer .buttons .btn:hover {
+  background: #ffffff;
+}
+body.theme2 .continer .buttons .btn:active {
+  -webkit-box-shadow: 0 0 0 0 #a79e91;
+          box-shadow: 0 0 0 0 #a79e91;
+}
+body.theme2 .continer .buttons .btn.del, body.theme2 .continer .buttons .btn.reset, body.theme2 .continer .buttons .btn.equal {
+  background: #378187;
+  -webkit-box-shadow: 0 4px 0 0 #1b6066;
+          box-shadow: 0 4px 0 0 #1b6066;
+  color: #fff;
+}
+body.theme2 .continer .buttons .btn.del:hover, body.theme2 .continer .buttons .btn.reset:hover, body.theme2 .continer .buttons .btn.equal:hover {
+  background: #62b5bc;
+}
+body.theme2 .continer .buttons .btn.del:active, body.theme2 .continer .buttons .btn.reset:active, body.theme2 .continer .buttons .btn.equal:active {
+  -webkit-box-shadow: 0 0 0 0 #1b6066;
+          box-shadow: 0 0 0 0 #1b6066;
+}
+body.theme2 .continer .buttons .btn.equal {
+  background: #c85402;
+  -webkit-box-shadow: 0 4px 0 0 #873901;
+          box-shadow: 0 4px 0 0 #873901;
+}
+body.theme2 .continer .buttons .btn.equal:hover {
+  background: #f96b5b;
+}
+body.theme2 .continer .buttons .btn.equal:active {
+  -webkit-box-shadow: 0 0 0 0 #873901;
+          box-shadow: 0 0 0 0 #873901;
+}
+body.theme3 {
+  background-color: #17062a;
+}
+body.theme3 .continer .navbar .logo {
+  color: #ffe53d;
+}
+body.theme3 .continer .navbar .theme {
+  color: #ffe53d;
+}
+body.theme3 .continer .navbar .theme .controler {
+  background-color: #1e0936;
+}
+body.theme3 .continer .navbar .theme .controler .circle:hover {
+  background-color: #00ded0;
+}
+body.theme3 .continer .navbar .theme .controler .circle.isActive {
+  background-color: #93fff8;
+}
+body.theme3 .continer .output {
+  background-color: #1e0936;
+  color: #ffe53d;
+}
+body.theme3 .continer .buttons {
+  background-color: #1e0936;
+}
+body.theme3 .continer .buttons .btn {
+  background: #331c4d;
+  -webkit-box-shadow: 0 4px 0 0 #881c9e;
+          box-shadow: 0 4px 0 0 #881c9e;
+  color: #ffe53d;
+}
+body.theme3 .continer .buttons .btn:hover {
+  background: #6c34ac;
+}
+body.theme3 .continer .buttons .btn:active {
+  -webkit-box-shadow: 0 0 0 0 #881c9e;
+          box-shadow: 0 0 0 0 #881c9e;
+}
+body.theme3 .continer .buttons .btn.del, body.theme3 .continer .buttons .btn.reset, body.theme3 .continer .buttons .btn.equal {
+  background: #56077c;
+  -webkit-box-shadow: 0 4px 0 0 #be15f4;
+          box-shadow: 0 4px 0 0 #be15f4;
+  color: #fff;
+}
+body.theme3 .continer .buttons .btn.del:hover, body.theme3 .continer .buttons .btn.reset:hover, body.theme3 .continer .buttons .btn.equal:hover {
+  background: #8631af;
+}
+body.theme3 .continer .buttons .btn.del:active, body.theme3 .continer .buttons .btn.reset:active, body.theme3 .continer .buttons .btn.equal:active {
+  -webkit-box-shadow: 0 0 0 0 #be15f4;
+          box-shadow: 0 0 0 0 #be15f4;
+}
+body.theme3 .continer .buttons .btn.equal {
+  background: #00ded0;
+  -webkit-box-shadow: 0 4px 0 0 #6cf9f1;
+          box-shadow: 0 4px 0 0 #6cf9f1;
+  color: #1a2327;
+}
+body.theme3 .continer .buttons .btn.equal:hover {
+  background: #93fff8;
+}
+body.theme3 .continer .buttons .btn.equal:active {
+  -webkit-box-shadow: 0 0 0 0 #6cf9f1;
+          box-shadow: 0 0 0 0 #6cf9f1;
+}
+
+@media (max-width: 425px) {
+  body .continer {
+    margin-top: 40px;
+  }
+  body .continer .output {
+    padding: 29px 24px 22px;
+    font-size: 40px;
+  }
+  body .continer .buttons {
+    padding: 24px;
+    grid-auto-rows: 64px;
+    gap: 13px;
+  }
+  body .continer .buttons .btn {
+    border-radius: 5px;
+    font-size: 32px;
+  }
+  body .continer .buttons .btn.del, body .continer .buttons .btn.reset, body .continer .buttons .btn.equal {
+    font-size: 20px;
+  }
+}
